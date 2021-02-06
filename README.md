@@ -2,8 +2,8 @@
 
 An insecure expression (see https://github.com/thymeleaf/thymeleaf/issues/809) it is expected to raise a ThymeleafProcessingException.
 
-When an expression is succesfully parsed is cached by default in the thymeleaf EL cache (`EXPRESSION_CACHE` in `StandardCacheManager`).
-After that, the same expression as before, used in an insecure context (i.e `th:data-title=""${param.title}`) should raise an exception but the template is rendered without errors.
+When an expression is succesfully parsed, is cached by default in the thymeleaf EL cache (`EXPRESSION_CACHE` in `StandardCacheManager`).
+After that, the very same expression, used in an insecure context (i.e `th:data-title=""${param.title}`) should raise an exception but the template is rendered without errors.
 
 Steps to reproduce the bug:
   - Auto: `./mvnw test` 
